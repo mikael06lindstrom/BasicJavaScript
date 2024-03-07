@@ -33,3 +33,32 @@ function guessInteger(guess)
 	else
 		document.getElementById("guessresult").innerHTML = "Not matched";
 }
+
+// Calculate the days to chrismas day
+function dayToChrismas()
+{
+	// Variables for dates
+	let current_date, christmas_day;
+
+	// Total milliseconds on a day
+	let one_day_ms = 1000 * 60 * 60 * 24;
+
+	// Set the current day
+	current_date = new Date();
+
+	// Set chrismas day
+	christmas_day = new Date(current_date.getFullYear(), 11, 24);
+
+	// Check if today are between 26 and 31 december and if is it choise next year
+	if (current_date.getMonth() == 11 && current_date.getDate() > 25)
+	{
+		christmas_day.setFullYear(christmas_day.getFullYear + 1);
+	}
+
+	// Calculate first result in milliseconds then to days
+	var res = Math.round((christmas_day.getTime() - current_date.getTime()) / (one_day_ms))
+
+	var finalResult = res.toFixed(0);
+	// Show the result in the web
+	document.write("Today are " + finalResult + " day to chrismas day");
+}
