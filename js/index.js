@@ -75,3 +75,27 @@ function changeText(value)
 	else
 		document.getElementById("newtext").innerHTML = "Py" + value;
 }
+
+// Check numbers
+function checkInteger(int1, int2)
+{
+	// Variables for checking numbers
+	let t1, t2;
+	const chInt = 100;
+
+	// Calculate difference between user number and 100
+	t1 = int1 - 100;
+	t2 = int2 - 100;
+
+	// Check if difference are negative number
+	if (t1 < 0)
+		t1 *= -1;
+	if (t2 < 0)
+		t2 *= -1;
+
+	// Check which number are closed 100 and show this number
+	if (t1 < t2)
+		document.getElementById("checkresult").innerHTML = "The number that are closed 100 are " + int1;
+	else
+		document.getElementById("checkresult").innerHTML = "The number that are closed 100 are " + int2;
+}
