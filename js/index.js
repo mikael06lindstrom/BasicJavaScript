@@ -20,3 +20,16 @@ function animate_string(id)
 		textNode.data = text;
 	}, 500);
 }
+
+// Guess integer
+function guessInteger(guess)
+{
+	// Create a randomly integer between 1 and 10
+	let rndvalue = Math.floor(Math.random() * 10) + 1;
+
+	// Check if the user guess correct integer and show the result for the user
+	if (guess == rndvalue)
+		document.getElementById("guessresult").innerHTML = "Good work";
+	else
+		document.getElementById("guessresult").innerHTML = "Not matched";
+}
