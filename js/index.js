@@ -62,3 +62,16 @@ function dayToChrismas()
 	// Show the result in the web
 	document.write("Today are " + finalResult + " day to chrismas day");
 }
+
+// Change a text in a string
+function changeText(value)
+{
+	// Clear text in element for result
+	document.getElementById("newtext").innerHTML = "";
+
+	// Check if user write a text that begin by Py or py else add it then view result
+	if (value.substring(0, 2) == "Py" || value.substring(0, 2) == "py")
+		document.getElementById("newtext").innerHTML = value;
+	else
+		document.getElementById("newtext").innerHTML = "Py" + value;
+}
